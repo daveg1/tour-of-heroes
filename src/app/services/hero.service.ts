@@ -14,7 +14,7 @@ export class HeroService {
   constructor(private messageService: MessageService) {}
 
   getHeroes(): Observable<Hero[]> {
-    const message = this.messageService.format(TAG, 'fetched heroes');
+    const message = this.messageService.format(TAG, 'Fetched heroes');
     this.messageService.add(message);
     return of(HEROES);
   }

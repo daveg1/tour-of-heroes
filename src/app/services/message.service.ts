@@ -14,7 +14,7 @@ export class MessageService {
     this.messages = [];
   }
 
-  format(...args: any) {
+  format(tag: string, ...args: any) {
     return [...args].join(' ');
   }
 }
