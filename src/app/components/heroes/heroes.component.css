@@ -1,0 +1,5 @@
+.selected {
+  @apply
+  bg-slate-800
+  text-white;
+}

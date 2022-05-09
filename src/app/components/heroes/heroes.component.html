@@ -1,0 +1,17 @@
+<h2 class="mb-4 text-2xl">My Heroes</h2>
+
+<ul class="flex gap-3 flex-wrap">
+  <li *ngFor="let hero of heroes">
+    <button
+      type="button"
+      (click)="onSelect(hero)"
+      [class.selected]="selectedHero === hero"
+      class="flex items-center rounded bg-slate-200 text-sm cursor-pointer overflow-clip select-none hover:bg-slate-200/80"
+    >
+      <span class="p-1 bg-blue-500 text-white">{{ hero.id }}</span>
+      <span class="px-2 font-semibold">{{ hero.name }}</span>
+    </button>
+  </li>
+</ul>
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>

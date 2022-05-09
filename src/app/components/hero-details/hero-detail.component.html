@@ -1,0 +1,11 @@
+<section
+  *ngIf="hero"
+  class="mt-4 p-4 border border-slate-300 rounded-lg"
+>
+  <h2 class="mb-2 font-semibold">{{ hero.name | uppercase }} Details</h2>
+  <div>id: {{hero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Name">
+  </div>
+</section>
