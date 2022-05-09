@@ -26,6 +26,18 @@ export class HeroesComponent implements OnInit {
   }
 
   onSelect(hero: Hero) {
+    // Prevent useless events
+    if (hero === this.selectedHero) {
+      const message = this.messageService.format(
+        TAG,
+        'Deselected hero',
+        hero.id
+      );
+      this.messageService.add(message);
+      this.selectedHero = undefined;
+      return;
+    }
+
     const message = this.messageService.format(TAG, 'Selected hero', hero.id);
     this.messageService.add(message);
     this.selectedHero = hero;
