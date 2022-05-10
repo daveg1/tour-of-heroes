@@ -1,10 +1,4 @@
-<header class="p-4 bg-slate-200">
-  <h1 class="text-3xl font-semibold">{{ title }}</h1>
-  <nav class="mt-2 flex gap-4">
-    <a routerLink="/dashboard" class="nav-link">Dashboard</a>
-    <a routerLink="/heroes" class="nav-link">Heroes</a>
-  </nav>
-</header>
+<app-header [title]="title"></app-header>
 
 <main class="p-4 flex sm:flex-col sm:gap-8 md:flex-row md:gap-8">
   <router-outlet class="sr-only"></router-outlet>

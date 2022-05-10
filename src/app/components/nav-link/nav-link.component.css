@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .active-link {
+    @apply border-b-2 border-blue-500 text-black;
+  }
+}
