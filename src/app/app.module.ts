@@ -9,7 +9,8 @@ import { HeroDetailComponent } from './components/hero-detail/hero-detail.compon
 import { MessagesComponent } from './components/messages/messages.component'
 import { AppRoutingModule } from './modules/app-routing.module'
 import { DashboardComponent } from './components/dashboard/dashboard.component'
-import { HeroLinkComponent } from './components/controls/hero-link/hero-link.component'
+import { HeroLinkComponent } from './components/controls/hero-link/hero-link.component';
+import { ButtonBaseComponent } from './components/controls/button-base/button-base.component'
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeroLinkComponent } from './components/controls/hero-link/hero-link.com
     MessagesComponent,
     DashboardComponent,
     HeroLinkComponent,
+    ButtonBaseComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
