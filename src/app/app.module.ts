@@ -12,8 +12,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component'
 import { HeroesComponent } from './pages/heroes/heroes.component'
 import { HeroDetailComponent } from './pages/hero-detail/hero-detail.component'
 
-import { ButtonBaseComponent } from './components/controls/button-base/button-base.component'
-import { HeroLinkComponent } from './components/controls/hero-link/hero-link.component'
+import { ButtonBaseComponent } from './components/button-base/button-base.component'
+import { HeroLinkComponent } from './components/hero-link/hero-link.component'
 import { MessagesComponent } from './components/messages/messages.component'
 
 @NgModule({
