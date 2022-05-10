@@ -1,5 +1,15 @@
 <h2 class="mb-4 text-2xl">My Heroes</h2>
 
-<div class="flex flex-wrap gap-2">
-  <hero-link *ngFor="let hero of heroes" [hero]="hero"></hero-link>
+<ul class="flex flex-col gap-2">
+  <li *ngFor="let hero of heroes" class="flex gap-2">
+    <hero-link [hero]="hero"></hero-link>
+    <button-base (click)="remove(hero)" title="Delete hero" text="X"></button-base>
+  </li>
+</ul>
+
+<div class="mt-8">
+  <h2 class="mb-4 text-2xl">Create Hero</h2>
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #heroName />
+  <button-base text="Add hero" (click)="add(heroName.value); heroName.value = ''"></button-base>
 </div>

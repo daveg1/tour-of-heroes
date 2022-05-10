@@ -10,6 +10,9 @@ import { Hero } from '../types/Hero'
 })
 export class HeroService {
   private readonly heroesUrl = 'api/heroes'
+  private httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  }
 
   constructor(private http: HttpClient, private messageService: MessageService) {}
 
@@ -27,6 +30,29 @@ export class HeroService {
     return this.http.get<Hero>(url).pipe(
       tap((value) => this.log(`fetched hero id=${value.id}`)),
       catchError(this.handleError<Hero>('getHeroById')),
+    )
+  }
+
+  updateHero(hero: Hero): Observable<any> {
+    return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
+      tap((_) => this.log(`updated hero id=${hero.id}`)),
+      catchError(this.handleError<any>('updateHero')),
+    )
+  }
+
+  addHero(hero: Hero): Observable<Hero> {
+    return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
+      tap((newHero: Hero) => this.log(`added hero ${newHero.name}, id=${newHero.id}`)),
+      catchError(this.handleError<Hero>('addHero')),
+    )
+  }
+
+  removeHero(id: number): Observable<Hero> {
+    const url = `${this.heroesUrl}/${id}`
+
+    return this.http.delete<Hero>(url, this.httpOptions).pipe(
+      tap((_) => this.log(`delete hero id=${id}`)),
+      catchError(this.handleError<Hero>('deleteHero')),
     )
   }
 
