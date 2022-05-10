@@ -1,7 +1,7 @@
 <div *ngIf="messageService.messages.length">
   <div class="mb-2 flex items-center gap-2">
     <h2 class="text-2xl">Messages</h2>
-    <app-button-base (click)="onClear()" text="Clear"></app-button-base>
+    <button-base (click)="onClear()" text="Clear"></button-base>
   </div>
   <div *ngFor="let message of messageService.messages">
     {{ message }}

@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core'
 import { Hero } from 'src/app/types/Hero'
 
 @Component({
-  selector: 'app-hero-link',
+  selector: 'hero-link',
   templateUrl: './hero-link.component.html',
   styleUrls: [],
 })
