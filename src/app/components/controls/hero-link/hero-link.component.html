@@ -1,0 +1,8 @@
+<a
+  *ngIf="hero"
+  routerLink="/detail/{{ hero.id }}"
+  class="flex items-center rounded bg-slate-200 text-sm cursor-pointer overflow-clip select-none hover:bg-slate-200/80"
+>
+  <span class="p-1 bg-blue-500 text-white">{{ hero.id }}</span>
+  <span class="px-2 font-semibold">{{ hero.name }}</span>
+</a>
