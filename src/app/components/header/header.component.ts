@@ -7,8 +7,13 @@ import { Component, OnInit, Input } from '@angular/core'
 })
 export class HeaderComponent implements OnInit {
   @Input() title?: string
+  showMessages = false
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  openMessages() {
+    this.showMessages = !this.showMessages
+  }
 }
