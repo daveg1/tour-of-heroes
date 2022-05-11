@@ -1,0 +1,15 @@
+<div class="relative">
+  <input
+    type="search"
+    placeholder="Search heroes"
+    #searchBox
+    (input)="search(searchBox.value)"
+    class="w-40 px-1 leading-6 rounded border border-slate-200 outline-none text-sm"
+  />
+
+  <ul class="absolute top-4 right-0 min-w-max border border-slate-">
+    <li *ngFor="let hero of heroes$ | async">
+      <a routerLink="/detail/{{ hero.id }}">{{ hero.name }}</a>
+    </li>
+  </ul>
+</div>

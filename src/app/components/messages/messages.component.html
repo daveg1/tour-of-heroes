@@ -1,4 +1,7 @@
-<div *ngIf="messageService.messages.length" class="py-2 px-4 rounded-lg border border-slate-200">
+<div
+  *ngIf="messageService.messages.length"
+  class="py-2 px-4 rounded-lg bg-white border border-slate-200"
+>
   <div class="mb-2 flex items-center justify-between">
     <h2 class="font-semibold text-lg">Messages</h2>
     <button-base (click)="onClear()" text="Clear"></button-base>

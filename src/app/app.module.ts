@@ -14,9 +14,10 @@ import { HeroDetailComponent } from './pages/hero-detail/hero-detail.component'
 
 import { ButtonBaseComponent } from './components/button-base/button-base.component'
 import { HeroLinkComponent } from './components/hero-link/hero-link.component'
-import { MessagesComponent } from './components/messages/messages.component';
-import { HeaderComponent } from './components/header/header.component';
-import { NavLinkComponent } from './components/nav-link/nav-link.component'
+import { MessagesComponent } from './components/messages/messages.component'
+import { HeaderComponent } from './components/header/header.component'
+import { NavLinkComponent } from './components/nav-link/nav-link.component';
+import { HeroSearchComponent } from './components/hero-search/hero-search.component'
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { NavLinkComponent } from './components/nav-link/nav-link.component'
     ButtonBaseComponent,
     HeaderComponent,
     NavLinkComponent,
+    HeroSearchComponent,
   ],
   imports: [
     BrowserModule,
